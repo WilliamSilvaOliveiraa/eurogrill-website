@@ -1,0 +1,129 @@
+.container {
+    width: 100%;
+    max-width: 1448px;
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 95px;
+}
+
+.title {
+    text-align: center;
+    margin: 24px 0;
+}
+
+.imagem {
+    gap: 10px;
+}
+
+.gallery {
+    background: #3b3b3d;
+}
+
+.fullImage {
+    z-index: 1000; /* Valor maior que o z-index da navbar para sobrepor */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95); /* Fundo preto com opacidade de 70% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Adicione estas regras ao seu arquivo de estilos (Gallery.css, por exemplo) */
+
+.btn-close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    border: none;
+    background-color: white;
+    color: #fff; /* Cor do ícone (pode ser ajustada conforme necessário) */
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50%; /* Torna o botão redondo */
+}
+
+.btn-previous {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 95%;
+
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 7px;
+    font-size: 25px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    border-radius: 10%; /* Torna o botão um círculo */
+    margin-right: 20%;
+}
+
+.btn-previous:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.btn-next {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 95%;
+
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 7px;
+    font-size: 25px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    border-radius: 10%; /* Torna o botão um círculo */
+    margin-left: 20%;
+}
+
+.btn-next:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.card-imagem-gallery {
+    width: auto;
+    max-width: 85%;
+    max-height: 85%;
+    border: 2px solid #ccc; /* Cor da borda da moldura */
+    border-radius: 10px; /* Borda arredondada para um visual mais suave */
+    overflow: hidden; /* Garante que a imagem não ultrapasse a moldura */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave para um efeito de elevação */
+    margin-bottom: 50px;
+}
+
+.card-imagem-gallery img {
+    width: 100%; /* Garante que a imagem ocupe 100% da largura da moldura */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+.imagem-min {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    border: 1px solid #fff; /* Borda branca fina */
+    transition: transform 0.3s ease-in-out; /* Efeito de transição suave */
+}
+
+.imagem-min:hover {
+    transform: scale(1.05); /* Aumenta a escala em 10% ao passar o mouse */
+}

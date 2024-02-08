@@ -1,0 +1,567 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+.main-gourmet {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background: #f8f8f8;
+    padding-top: 3.8vw;
+    gap: 2vw;
+    padding-bottom: 6%;
+}
+
+.gallery-gourmet {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1vw;
+    padding: 0 15vw;
+}
+.container-img-gourmet {
+    position: relative;
+    height: 210px;
+    width: 150px;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+.container-img-gourmet img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s linear;
+
+    object-fit: cover;
+}
+.container-img-gourmet:hover .fade-overlay {
+    opacity: 0.3;
+}
+
+.container-img-gourmet .fade-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.8)
+    );
+    pointer-events: none;
+
+    transition: opacity 0.2s linear;
+}
+
+.btn-sair-gourmet {
+    cursor: pointer;
+    position: absolute;
+    left: 94%;
+    top: 6%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #912224;
+    color: white;
+    width: 8vw;
+    height: 3vw;
+    font-size: 1.3vw;
+    border-radius: 0.5vw;
+}
+
+.container-img-gourmet h1 {
+    position: absolute;
+    font-size: 1vw;
+    bottom: 0;
+    left: 0.5vw;
+    color: white;
+    text-transform: capitalize;
+    z-index: 2;
+}
+
+.container-img-gourmet:hover img {
+    transform: scale(1.05);
+}
+
+.container-img-gourmet:hover .hover-overlay {
+    opacity: 1;
+    background-position: 0 0; /* Quando o mouse passa sobre o contêiner, ajusta a posição do gradiente para começar do topo */
+}
+/* 
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0) 50%
+    );
+
+    opacity: 0;
+    transition: opacity 0.3s, background-position 0.3s;  Adiciona transição à opacidade e à posição do background 
+    background-position: 0 100%; Inicialmente, o gradiente começa no fundo do contêiner 
+    z-index: 1;
+}
+*/
+
+.gourmet-text {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4vw;
+}
+
+.text-overlay-gourmet h1 {
+    font-family: "Roboto Slab", slab-serif;
+    margin: 0;
+    font-size: 4vw;
+}
+
+.text-overlay-gourmet h3 {
+    font-family: "Roboto Slab", slab-serif;
+    margin: 0;
+    font-size: 1.7vw;
+}
+
+.gourmet-text h2 {
+    margin: 0;
+    font-family: "Pacifico";
+    font-size: 2.2vw;
+    color: #912224;
+    border-bottom: 1px solid #525255; /* Adiciona uma borda inferior de 1 pixel de largura e cor preta */
+    padding-bottom: 2vw; /* Adiciona algum espaço entre o conteúdo da div e a linha */
+    text-align: center;
+}
+
+.gourmet-text p {
+    font-size: 1.1vw;
+    padding-top: 2vw;
+    text-align: center;
+    padding-right: 20vw;
+    padding-left: 20vw;
+}
+
+.img-topo-gourmet {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.text-overlay-gourmet {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    text-align: center;
+    z-index: 10;
+}
+
+.img-topo-gourmet img {
+    width: 100%;
+    height: 35vw;
+    object-fit: cover; /* Mantém a proporção e ajusta a imagem para caber dentro do contêiner */
+    filter: brightness(
+        30%
+    ); /* Ajuste o valor conforme necessário para escurecer a imagem */
+    object-position: 0 60%; /* ajustar a posição da imagem (exemplo: 20% da largura e 30% da altura) */
+}
+
+.imagem-tela-cheia-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1000;
+
+    .imagem-container {
+        width: 69vw;
+
+        max-height: 100%; /* Defina a altura máxima do contêiner da imagem */
+        background: #fffafa;
+        position: relative;
+        transform: scale(0.85);
+    }
+
+    .imagem-container img {
+        width: 100%;
+        height: 90vh; /* Define a altura como automática para manter a proporção */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+}
+
+.seta-esquerda,
+.seta-direita {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5vw;
+    color: #fff;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 13px;
+    border-radius: 5px;
+}
+
+.seta-esquerda:hover,
+.seta-direita:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.seta-esquerda {
+    left: 10vw;
+}
+
+.seta-direita {
+    right: 10vw;
+}
+
+.texto-superior {
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+
+    text-align: center;
+    top: 5%;
+    color: #fff;
+    font-size: 18px;
+}
+
+.texto-superior h3 {
+    font-family: "Roboto Slab", slab-serif;
+    margin: 0;
+    font-size: 3vw;
+}
+
+.texto-superior p {
+    margin: 0;
+    font-size: 1.5vw;
+    font-family: "Open Sans", sans-serif;
+}
+
+@media screen and (max-width: 767px) {
+    .main-gourmet {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        background: #f8f8f8;
+        padding-top: 5vh;
+        gap: 2vw;
+        margin-bottom: 3%;
+    }
+
+    .gallery-gourmet {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 4vw 0;
+        padding: 10% 9%;
+    }
+    .container-img-gourmet {
+        position: relative;
+        height: 210px;
+        width: 150px;
+        border-radius: 2px;
+        overflow: hidden;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+    }
+    .container-img-gourmet img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        transition: all 0.2s linear;
+
+        object-fit: cover;
+    }
+    .container-img-gourmet:hover .fade-overlay {
+        opacity: 0.3;
+    }
+
+    .container-img-gourmet .fade-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.8)
+        );
+        pointer-events: none;
+
+        transition: opacity 0.2s linear;
+    }
+    .container-img-gourmet h1 {
+        position: absolute;
+        font-size: 3vw;
+        bottom: 0;
+        left: 2vw;
+        color: white;
+        text-transform: capitalize;
+        z-index: 2;
+    }
+
+    .container-img-gourmet:hover img {
+        transform: scale(1.05);
+    }
+
+    .container-img-gourmet:hover .hover-overlay {
+        opacity: 1;
+        background-position: 0 0; /* Quando o mouse passa sobre o contêiner, ajusta a posição do gradiente para começar do topo */
+    }
+    /* 
+    .hover-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0) 50%
+        );
+    
+        opacity: 0;
+        transition: opacity 0.3s, background-position 0.3s;  Adiciona transição à opacidade e à posição do background 
+        background-position: 0 100%; Inicialmente, o gradiente começa no fundo do contêiner 
+        z-index: 1;
+    }
+    */
+
+    .gourmet-text {
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15vw;
+        padding: 0 9%;
+    }
+
+    .text-overlay-gourmet h1 {
+        font-family: "Roboto Slab", slab-serif;
+        margin: 0;
+        font-size: 14vw;
+    }
+
+    .text-overlay-gourmet h3 {
+        font-family: "Roboto Slab", slab-serif;
+        margin: 0;
+        font-size: 5.8vw;
+    }
+
+    .gourmet-text h2 {
+        margin: 0;
+        font-family: "Pacifico";
+        font-size: 9vw;
+        color: #912224;
+        border-bottom: 1px solid #525255; /* Adiciona uma borda inferior de 1 pixel de largura e cor preta */
+        padding-bottom: 5vw; /* Adiciona algum espaço entre o conteúdo da div e a linha */
+    }
+
+    .gourmet-text p {
+        font-size: 4vw;
+        padding-top: 2vw;
+        text-align: center;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .img-topo-gourmet {
+        position: relative;
+        width: 100%;
+        height: 140vw;
+        overflow: hidden;
+        color: white;
+    }
+
+    .text-overlay-gourmet {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        text-align: center;
+        z-index: 10;
+    }
+
+    .img-topo-gourmet img {
+        width: 100%;
+        height: 100%;
+
+        position: relative;
+
+        object-fit: cover; /* Mantém a proporção e ajusta a imagem para caber dentro do contêiner */
+        filter: brightness(
+            30%
+        ); /* Ajuste o valor conforme necessário para escurecer a imagem */
+        object-position: 100% 0; /* ajustar a posição da imagem (exemplo: 20% da largura e 30% da altura) */
+    }
+
+    .imagem-tela-cheia-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0;
+        flex-direction: column;
+        z-index: 1000;
+        gap: 2vw;
+
+        .imagem-container {
+            width: 100%;
+            max-height: 100%; /* Defina a altura máxima do contêiner da imagem */
+            background: #fffafa;
+            position: relative;
+            display: flex;
+            bottom: 0;
+            align-items: center;
+            transform: scale(1);
+        }
+
+        .imagem-container img {
+            width: 100%;
+            height: 70vh; /* Define a altura como automática para manter a proporção */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            object-fit: contain;
+        }
+    }
+
+    .seta-esquerda,
+    .seta-direita {
+        position: absolute;
+        top: 96%;
+        width: 20vw;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 30;
+        transform: translateY(-50%);
+        font-size: 10vw;
+        width: 25vw;
+        height: 6vh;
+        color: #000000;
+        cursor: pointer;
+        font-weight: 500;
+        background: rgba(255, 255, 255, 0.7);
+        padding: 13px;
+        border-radius: 5px;
+    }
+
+    .seta-esquerda:hover,
+    .seta-direita:hover {
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    .seta-esquerda {
+        left: 10vw;
+    }
+
+    .seta-direita {
+        right: 10vw;
+    }
+
+    .texto-superior {
+        width: 100%;
+        position: relative;
+        z-index: 1000;
+        height: 13%;
+
+        top: inherit;
+        color: #fff;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .texto-superior h3 {
+        font-family: "Roboto Slab", slab-serif;
+        margin: 0;
+        padding: 0 2vw;
+        font-size: 7vw;
+    }
+
+    .texto-superior p {
+        margin: 0;
+        font-size: 4vw;
+        padding: 0 1vw;
+
+        font-family: "Open Sans", sans-serif;
+    }
+    .btn-sair-gourmet {
+        cursor: pointer;
+
+        position: relative;
+        left: inherit;
+        top: inherit;
+        transform: translate(0);
+        z-index: 10000;
+        border: none;
+        display: flex;
+        margin-top: 0;
+        align-items: center;
+        justify-content: center;
+
+        background: transparent;
+        background: #912224;
+        width: 20%;
+        height: 5%;
+        font-size: 4vw;
+        font-weight: 500;
+        color: #ffffff;
+
+        border-bottom-left-radius: 3vw;
+        border-bottom-right-radius: 3vw;
+    }
+}

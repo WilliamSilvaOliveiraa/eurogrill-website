@@ -1,0 +1,784 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap");
+
+.main_content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    box-sizing: border-box;
+    flex-direction: column;
+
+    padding: 7% 7% 110px 7%;
+    background: #f8f8f8;
+}
+
+.filtro-escada {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+    gap: 0.8vw;
+}
+
+.header-top2 {
+    display: none;
+}
+
+.texto-filtro i {
+    transition: 0.3s ease;
+}
+/* Adicione estilos CSS para a classe 'icone-espelhado' */
+.icone-espelhado {
+    transform: scaleY(-1);
+}
+
+.filtro-escada h1 {
+    font-size: 1vw;
+    font-weight: 400;
+    margin: 0;
+}
+.texto-filtro {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.filtro-geral {
+    width: 14vw;
+    cursor: pointer;
+    border-bottom: 1px solid gray;
+}
+
+.texto-filtro i {
+    width: 10%;
+    font-size: 1.5vw;
+    color: #3c3c3f;
+}
+
+.filtro-geral h1 {
+    padding: 0 0 0 6px;
+    width: 90%;
+    font-size: 1vw;
+    height: 100%;
+    font-weight: 500;
+    color: #3c3c3f;
+}
+
+.filtro-dropdown {
+    position: absolute;
+    z-index: 999;
+    background: transparent;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    margin-top: 0.2vw;
+    list-style: none;
+    transition: 1s;
+}
+
+.filtro-dropdown.visivel {
+    display: flex;
+}
+
+.filtro-dropdown li {
+    background: white;
+    width: 14vw;
+    padding: 10px 6px 10px 6px;
+    color: black;
+    font-size: 1vw;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease;
+}
+
+.filtro-dropdown li:hover {
+    background: rgb(209, 209, 209);
+}
+.card_group {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 4 colunas com largura igual */
+    grid-gap: 16px; /* Espaçamento entre os elementos */
+    justify-content: space-between; /* Alinha os elementos à esquerda e à direita na linha */
+
+    height: 100%;
+    gap: 2vw 0.9vw;
+}
+.card_group::after {
+    content: "";
+    flex: auto; /* Preenche o espaço disponível */
+}
+
+.card_group.filter-active {
+    width: 100%;
+}
+
+.card {
+    width: 100%;
+    height: 23vw; /* Defina a altura desejada para o card */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    position: relative;
+    overflow: hidden;
+    border: solid 1px #6e6e6e9f;
+    transition: all 0.3s ease;
+    background: white;
+    padding: 1rem;
+}
+
+.header-content {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    padding-bottom: 1vw;
+    margin-bottom: 1vw;
+    border-bottom: #75757559 1px solid;
+}
+
+.header-top {
+    width: 100%;
+    height: 3vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.header-top p {
+    margin: 0;
+    font-size: 1vw;
+}
+
+.title_product {
+    position: relative;
+    font-size: 4.2vw; /* Exemplo de tamanho de fonte responsivo em relação à largura da janela de visualização */
+    /*color: rgba(42, 42, 43, 0.8);  0.8 é a opacidade (de 0 a 1) */
+    color: #1b1b1d;
+    font-family: "Roboto";
+    margin: 0;
+}
+
+.sub_title_product {
+    position: relative;
+    font-size: 1.7vw; /* Exemplo de tamanho de fonte responsivo em relação à largura da janela de visualização */
+    color: #1b1b1d;
+    align-self: flex-start; /* Adicionado para alinhar à esquerda */
+    display: none;
+    padding-top: 0px;
+    margin: 0;
+}
+
+.card_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    color: #1b1b1d;
+    position: relative;
+    width: 100%;
+    padding-top: 1vw;
+    height: 27vw;
+    transition: all 0.3s ease;
+
+    bottom: 0;
+
+    h2 {
+        height: 30px;
+        font-size: 1vw;
+        text-align: start;
+        margin: 0;
+        color: #373737;
+    }
+    p {
+        font-size: 0.8vw;
+        color: #373737;
+        margin: 0;
+    }
+    .price {
+        font-size: 1.3vw;
+        color: #373737;
+        margin: 0;
+    }
+    span {
+        font-size: 1.2vw;
+    }
+}
+
+.card:hover {
+    cursor: pointer;
+
+    .label-comprar p {
+        margin-left: 2vw;
+        font-size: 1vw;
+    }
+    .label-comprar i {
+        display: block;
+        opacity: 1;
+        left: 23%;
+    }
+}
+
+.label-comprar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.label-comprar i {
+    color: white;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1vw;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.label-comprar p {
+    color: white;
+    margin-bottom: 2px;
+    margin-left: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-comprar {
+    width: 100%;
+    height: 2.5vw;
+    position: relative;
+    border-radius: 3px;
+    border: none;
+    background: #6aad33;
+    text-decoration: none; /* Remove o sublinhado padrão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card_img {
+    height: 250px;
+    background: transparent;
+    overflow: hidden; /* Garante que a imagem não ultrapasse a altura definida */
+    outline: none;
+}
+
+.card_img img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain; /* Mantém a proporção e ajusta a imagem para caber dentro do contêiner */
+}
+
+.drop-menu {
+    position: relative;
+    display: flex;
+
+    width: 100%;
+    height: 2.8vw;
+    align-self: flex-start;
+
+    justify-content: center;
+    border: none;
+}
+
+.menu-trigger {
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #912224;
+    color: #fff;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    font-size: 1.2vw;
+    justify-content: space-between;
+}
+
+.menu-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    gap: 3px;
+    z-index: 100;
+    border: none;
+}
+
+.option {
+    background: white;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    display: flex;
+    font-size: 15px;
+}
+
+.option:hover {
+    background: rgb(209, 209, 209);
+}
+.menu-options div {
+    padding: 8px 10px 8px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.menu-trigger i {
+    transition: transform 0.3s ease; /* Adiciona uma transição suave de 0.3 segundos com função ease */
+}
+
+.menu-trigger i.flipped {
+    transform: scaleY(
+        -1
+    ); /* Espelha verticalmente quando a classe 'flipped' está presente */
+}
+
+.card_geral {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1vw;
+}
+
+.filtros {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.subtype-container div {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.subtype-container input[type="checkbox"] {
+    margin-right: 5px; /* Espaço à direita da checkbox */
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    margin-bottom: 1px;
+    border-radius: none;
+}
+
+.title-material {
+    width: 100%;
+    height: 100%;
+}
+
+.title-material h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin: 0;
+    color: #373737;
+}
+
+.subtype-container label {
+    display: inline-block;
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: #373737;
+}
+
+.subtype-container {
+    width: 100%;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border: solid 1px #6e6e6e9f;
+    background: white;
+    padding: 8% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1vw;
+}
+
+.subtype-container.visible {
+    display: flex; /* Será aplicado quando isSubtypeVisible for true */
+}
+
+.subtype-container.hidden {
+    display: none; /* Será aplicado quando isSubtypeVisible for false */
+}
+
+@media screen and (max-width: 1024px) {
+    .main_content {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        gap: 10px;
+        box-sizing: border-box;
+        flex-direction: column;
+
+        padding: 10% 7% 110px 7%;
+        background: #f8f8f8;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .title_product {
+        width: 100%;
+        position: relative;
+        font-size: 8.5vw; /* Exemplo de tamanho de fonte responsivo em relação à largura da janela de visualização */
+        /*color: rgba(42, 42, 43, 0.8);  0.8 é a opacidade (de 0 a 1) */
+        color: #1b1b1d;
+        font-family: "Roboto";
+    }
+
+    .sub_title_product {
+        align-self: center; /* Adicionado para alinhar à esquerda */
+        margin-left: 0%; /* Adiciona algum espaçamento à esquerda */
+        display: flex;
+        padding-top: 0px;
+        font-size: 4vw;
+        margin: 3vw 0;
+        width: 100%;
+    }
+    .drop-menu {
+        margin-top: 10px;
+        margin-bottom: 15px;
+        width: 100%;
+        height: 7vw;
+        align-self: flex-start;
+        margin-left: 0;
+
+        justify-content: center;
+        border: none;
+    }
+
+    .card_group {
+        grid-template-columns: repeat(2, 1fr) !important;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 4vw 3vw;
+    }
+    .card_group.filter-active {
+        width: 100%;
+    }
+
+    .card_group::after {
+        content: inherit;
+        flex: inherit; /* Preenche o espaço disponível */
+    }
+    .main_content {
+        display: flex;
+
+        align-items: center;
+        position: relative;
+        width: 100%;
+
+        gap: 10px;
+        box-sizing: border-box;
+
+        flex-direction: column;
+
+        padding: 90px 3vw 110px 3vw;
+        background: #f8f8f8;
+    }
+
+    .card {
+        width: 100%;
+        height: 70vw; /* Defina a altura desejada para o card */
+        text-decoration: none; /* Remove o sublinhado padrão */
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+
+        position: relative;
+        overflow: hidden;
+        border: solid 1px #6e6e6e9f;
+        transition: all 0.3s ease;
+    }
+    .borda-top {
+        background: #9b9b9b54;
+        width: 75%;
+        height: 2px;
+        position: absolute;
+        top: 28vw;
+
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease;
+        opacity: 1;
+    }
+    .card_img {
+        height: 100%;
+        width: 100%;
+        overflow: hidden; /* Garante que a imagem não ultrapasse a altura definida */
+        outline: none;
+    }
+
+    .card_img img {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+
+        object-fit: contain; /* Mantém a proporção e ajusta a imagem para caber dentro do contêiner */
+    }
+    .card_header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        flex-direction: column;
+        color: #1b1b1d;
+        position: relative;
+        width: 100%;
+        height: inherit;
+        transition: all 0.3s ease;
+        bottom: 0;
+        gap: 0;
+        padding: 0;
+        h2 {
+            font-size: 3vw;
+            text-align: left;
+            margin: 0;
+            width: 100%;
+            color: #373737c4;
+            font-family: "Inter", sans-serif;
+            font-weight: 500;
+            height: 30px;
+            order: 2;
+            text-align: left;
+        }
+        p {
+            font-size: 2.5vw;
+            color: #373737c4;
+            margin: 0;
+            width: 100%;
+            height: 30px;
+            text-align: left;
+            font-family: "Inter", sans-serif;
+            font-weight: 500;
+            order: 3;
+        }
+        .price {
+            font-size: 3.5vw;
+            color: #1b1b1d;
+            margin: 0;
+            width: 100%;
+            text-align: left;
+            font-family: "Inter", sans-serif;
+            order: 1;
+        }
+        span {
+            font-size: 3vw;
+            width: 100%;
+            text-align: left;
+            font-family: "Inter", sans-serif;
+        }
+    }
+    .card:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+    }
+    .option {
+        background-color: white;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+        width: 99.6%;
+        height: 15vw;
+        display: flex;
+        font-size: 4vw;
+    }
+
+    .title-material h2 {
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 4vw;
+        margin: 0;
+        color: #373737;
+    }
+
+    .subtype-container label {
+        display: inline-block;
+        font-size: 3vw;
+        cursor: pointer;
+        color: #373737;
+    }
+
+    .card_geral {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3vw;
+    }
+
+    .subtype-container {
+        width: 100%;
+        gap: 2vw;
+        padding: 3%;
+    }
+
+    .menu-options {
+        top: 150%;
+    }
+
+    .menu-trigger {
+        height: 10vw;
+    }
+
+    .btn-comprar {
+        display: none;
+    }
+
+    .menu-trigger {
+        border: none;
+        width: 100%;
+        cursor: pointer;
+        padding: 10px;
+        background-color: #912224;
+        color: #fff;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 4vw;
+    }
+    .subtype-container input[type="checkbox"] {
+        margin-right: 5px; /* Espaço à direita da checkbox */
+        width: 3vw;
+        height: 3vw;
+        cursor: pointer;
+        margin-bottom: 1px;
+        border-radius: none;
+    }
+
+    .header-top {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .filtro-geral {
+        width: 100%;
+        cursor: pointer;
+        border-bottom: 1px solid gray;
+    }
+    .header-content {
+        width: 100%;
+        height: 100%;
+        display: none;
+        flex-direction: row;
+        gap: 1vw;
+        padding-bottom: 1vw;
+        margin-bottom: 1vw;
+        border-bottom: none;
+    }
+
+    .filtro-dropdown {
+        position: absolute;
+        z-index: 999;
+        background: transparent;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        width: 47%;
+        margin-top: 0.2vw;
+        list-style: none;
+        transition: 1s;
+    }
+
+    .filtro-dropdown li {
+        background: white;
+        width: 100%;
+        height: 10vw;
+        padding: 10px 6px 10px 6px;
+        color: black;
+        font-size: 4vw;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+        transition: 0.3s ease;
+    }
+
+    .header-top p {
+        margin: 0;
+        font-size: 5vw;
+        width: 100%;
+        display: none;
+    }
+
+    .texto-filtro i {
+        font-size: 5vw;
+    }
+    .filtro-escada {
+        display: flex;
+        height: 100%;
+        padding: 3% 0;
+        align-items: flex-end;
+        justify-content: center;
+        width: 100%;
+    }
+    .filtro-escada h1 {
+        font-size: 4vw;
+        font-weight: 400;
+        margin: 0;
+        width: 100%;
+    }
+
+    .filtros {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+    }
+    .header-top2 {
+        width: 100%;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .header-top2 p {
+        display: none;
+    }
+}

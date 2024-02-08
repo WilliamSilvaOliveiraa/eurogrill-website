@@ -1,0 +1,1939 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap")
+async;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap")
+async;
+
+* {
+    box-sizing: border-box;
+}
+
+.main-aboutUs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #f8f8f8;
+    color: white;
+    margin-top: 53px;
+    gap: 8vw;
+    overflow: hidden;
+}
+
+.img-retangular {
+    position: relative;
+    width: 100%;
+    height: 47vw;
+    overflow: hidden;
+}
+
+.img-retangular img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantém a proporção e ajusta a imagem para caber dentro do contêiner */
+    filter: brightness(
+        30%
+    ); /* Ajuste o valor conforme necessário para escurecer a imagem */
+}
+
+.text-overlay {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+.text-overlay h1 {
+    font-family: "Roboto Slab", slab-serif;
+    color: white;
+    font-size: 6vw;
+    margin: 0;
+}
+
+.text-overlay h2 {
+    margin: 0;
+    flex-direction: column;
+    font-family: "Roboto Slab", slab-serif;
+    color: white; /* ou qualquer cor que desejar */
+    font-size: 2.5vw;
+}
+
+.div-button-overlay {
+    width: 100%;
+    margin-top: 2vw;
+    height: 3.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.button-overlay-product {
+    width: 10vw;
+    height: 3vw;
+    font-size: 1vw;
+
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.8vw; /* Bordas arredondadas */
+    background-color: #ff0000; /* Fundo transparente para mostrar o brilho */
+    color: white; /* Cor do texto (vermelho) */
+    text-decoration: none;
+
+    box-shadow: 0px 0 15px rgba(255, 0, 0, 0.445); /* Ajuste o valor conforme necessário */
+    transition: all 0.3s linear;
+}
+
+.button-overlay-product:hover {
+    box-shadow: 0px 0 15px rgba(255, 0, 0, 0.068); /* Ajuste o valor conforme necessário */
+}
+
+.button-overlay-gallery {
+    width: 23vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    position: relative;
+    padding: 1vw 0;
+    border: none;
+    color: white;
+    background: transparent;
+    height: 100%;
+    left: 1.5vw;
+}
+
+.button-overlay-gallery i {
+    position: absolute;
+    left: 17.7vw;
+    bottom: 1vw;
+    transition: left 0.3s ease;
+    font-size: 1.4vw;
+}
+
+.button-overlay-gallery p {
+    position: relative;
+    top: 0.5vw;
+    right: 2vw;
+    font-size: 1.1vw;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 450;
+    padding-bottom: 1vw;
+}
+
+.button-overlay-gallery::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 11vw;
+    transform: translateX(-50%);
+    width: 20vw;
+    height: 2px;
+    background-color: #ff0000; /* Adapte a cor conforme necessário */
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 rgb(255, 0, 0); /* Ajuste o valor conforme necessário */
+}
+
+.button-overlay-gallery:hover::after {
+    left: 11.4vw;
+    width: 90%;
+    box-shadow: 0 0 10px rgb(255, 0, 0); /* Ajuste o valor conforme necessário */
+}
+
+.button-overlay-gallery:hover i {
+    left: 18.3vw;
+    opacity: 1;
+}
+
+.cards-container {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+    top: 45vw;
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-content: space-between;
+}
+
+.main2 {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0 15%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #1b1b1d;
+    padding-top: 5vw;
+}
+.main2-text {
+    width: 100%;
+    margin-top: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 2vw;
+    opacity: 0;
+}
+
+.img-main-text {
+    width: 100%;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2vw;
+}
+
+.main2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.main2-text h1 {
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    font-size: 2vw;
+    font-weight: 500;
+    padding-bottom: 1vw;
+}
+
+.seta-direita-slide {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    top: 73%;
+    border-radius: 50%;
+    right: 30vw;
+    translate: (-50%, -50%);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.seta-direita-slide:hover {
+    transform: scale(1.1);
+}
+
+.seta-esquerda-slide:hover {
+    transform: scale(1.1);
+}
+
+.seta-esquerda-slide i {
+    color: white;
+    font-size: 2vw;
+}
+.seta-direita-slide i {
+    color: white;
+    font-size: 2vw;
+}
+
+.seta-esquerda-slide {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    transition: 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    top: 73%;
+    left: 30vw;
+    translate: (-50%, -50%);
+    cursor: pointer;
+}
+
+.card-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-radius: 0.6rem;
+    width: 23vw;
+    height: 14vw;
+    background: white;
+    padding: 2vw;
+    box-shadow: 0 30px 45px rgba(0, 0, 0, 0.15);
+    gap: 0.5vw;
+    transform: translateY(-40px);
+    opacity: 0;
+}
+
+.card-info p {
+    color: #252525;
+    text-align: center;
+    margin: 0;
+    font-size: 1vw;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+.card-info h1 {
+    font-family: "Roboto Slab", slab-serif;
+    color: #751416;
+    font-size: 1.5vw;
+}
+.card-info i {
+    color: #ff0005;
+    font-size: 1.5vw;
+}
+
+.card-home {
+    position: relative;
+    width: 100%; /* Adiciona uma largura máxima para evitar que o card se expanda indefinidamente */
+    height: 17vw;
+    text-align: center;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5vw;
+    border-radius: 0.4vw;
+    text-align: center;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+        rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    transition: transform 0.3s ease;
+}
+
+.card-home:hover {
+    transform: scale(1.02) !important;
+}
+
+.card-image {
+    width: 55%; /* Garante que a imagem cubra todo o card */
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    position: absolute;
+    border: solid 0.35vw white;
+    top: 0; /* Move a imagem para a metade do card */
+    left: 50%; /* Move a imagem para a metade do card */
+    transform: translate(-50%, -50%); /* Centraliza a imagem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5vw 15% 2vw 15%;
+    color: #eee;
+    gap: 0.5vw;
+}
+
+.card-text h2 {
+    display: flex;
+
+    justify-content: center;
+    width: 100%;
+    height: 20px;
+    font-size: 1vw;
+    margin: 0;
+    color: #912224;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+}
+.card-text h1 {
+    font-family: "Inter", sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20px;
+    font-weight: 600;
+    font-size: 1.2vw;
+    margin: 0;
+    color: #1b1b1d;
+}
+.card-text p {
+    font-family: "Inter", sans-serif;
+    display: block;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    word-wrap: break-word; /* Permite que o texto quebre automaticamente */
+    height: 100px;
+    font-size: 0.9vw;
+    margin: 0;
+
+    color: #1b1b1d;
+}
+
+.home3 {
+    width: 100%;
+    gap: 5vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.churrasco {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16vw;
+}
+
+.img-churrasco {
+    position: relative;
+    width: 60%;
+    margin-right: 0px;
+}
+
+.img-churrasco img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantém a proporção e ajusta a imagem para caber dentro do contêiner */
+    /*    filter: brightness(
+        30%
+    ); Ajuste o valor conforme necessário para escurecer a imagem */
+    transform: translateX(-200px);
+    opacity: 0;
+}
+
+.texto-churrasco {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    transform: translateX(200px);
+    opacity: 0;
+    color: #1b1b1d;
+}
+
+.texto-churrasco h2 {
+    font-family: "Pacifico";
+    color: #912224;
+    margin: 0;
+    font-size: 2.5vw;
+}
+
+.texto-churrasco h1 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: #1b1b1d;
+    padding-right: 2vw;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.texto-churrasco p {
+    font-family: "Inter", sans-serif;
+    color: #3b3b3d;
+    font-weight: 400;
+    margin: 0;
+    padding-right: 18vw;
+    padding-top: 1vw;
+    font-size: 1rem;
+}
+
+.churrasco2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8vw;
+}
+
+.img-churrasco2 {
+    position: relative;
+    width: 60%;
+}
+
+.img-churrasco2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantém a proporção e ajusta a imagem para caber dentro do contêiner */
+    /*    filter: brightness(
+        30%
+    ); Ajuste o valor conforme necessário para escurecer a imagem */
+    transform: translateX(200px);
+
+    opacity: 0;
+}
+
+.texto-churrasco2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    color: #1b1b1d;
+    transform: translateX(-200px);
+    opacity: 0;
+}
+
+.texto-churrasco2 h2 {
+    font-family: "Pacifico";
+    color: #912224;
+    padding-left: 14vw;
+    margin: 0;
+    font-size: 2.5vw;
+}
+
+.texto-churrasco2 h1 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: #1b1b1d;
+    padding-left: 14vw;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.texto-churrasco2 p {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #3b3b3d;
+    margin: 0;
+
+    padding-top: 1vw;
+    font-size: 1rem;
+    padding-left: 14vw;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    padding: 10vw 15% 3vw 15%;
+}
+
+.modal-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal-img {
+    width: 7vw;
+    height: 7vw;
+}
+
+.modal-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.modal-text h1 {
+    width: 100%;
+    font-family: "Roboto Slab", slab-serif;
+    color: white;
+    font-size: 2.2vw;
+    margin: 0;
+    text-align: center;
+}
+
+.modal-text {
+    width: 100%;
+    background: linear-gradient(to right, #b9393b, #c45c5e);
+
+    height: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn-modal-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: #f8f8f8;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5vw 2.5vw 2vw 2.5vw;
+    gap: 3vw;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.btn-modal-3d {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.modal-img-estatica img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.modal-img-estatica {
+    position: relative;
+    background: none;
+    border-radius: 10px;
+    width: 10vw;
+    height: auto;
+    object-fit: contain;
+    bottom: 1vw;
+    opacity: 1;
+    transition: all 0.3s ease;
+    top: -0.5vw;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    position: relative;
+    transition: all 0.4s ease;
+    border-radius: 10px;
+    color: white;
+    flex-direction: column;
+    padding: 2vw 1vw 1vw 1vw;
+    gap: 1vw;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.modal-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 7vw;
+    position: relative;
+    color: white;
+    border-radius: 15px;
+    background: linear-gradient(to right, #912224, #c45c5e);
+    opacity: 1;
+    transition: all 0.3s ease;
+    font-size: 1.5vw;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    bottom: 2vw;
+    opacity: 0;
+}
+
+.btn-modal-3d:hover .modal-vidro-img {
+    filter: drop-shadow(0 0 px #6d6d6d);
+}
+
+.btn-modal-3d:hover .wrapper {
+    transform: perspective(50vw) rotateX(15deg);
+}
+
+.modal-text-3d {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 0.4vw 0 0.4vw;
+    color: #1b1b1d;
+    opacity: 1;
+    transition: all 0.4s ease;
+    top: 2vw;
+}
+
+.modal-text-3d h1 {
+    font-size: 1.4vw;
+    font-family: "Inter", sans-serif;
+    font-weight: 450;
+    margin: 0;
+    text-align: center;
+}
+
+.modal-text-3d h2 {
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    font-weight: 450;
+    font-size: 1.5vw;
+    margin: 0;
+    text-align: center;
+}
+
+.btn-modal-3d:hover .btn-modal-img {
+    bottom: 3vw;
+    width: 3.5vw;
+    opacity: 1;
+}
+
+.btn-modal-3d:hover .modal-text-3d {
+    opacity: 0;
+    bottom: -2vw;
+}
+
+.btn-modal-3d:hover .modal-btn {
+    bottom: 0.5vw;
+    opacity: 1;
+}
+
+.modal-btn:hover {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7); /* Ajuste o valor conforme necessário */
+}
+
+.btn-modal-3d:hover .modal-img-estatica {
+    opacity: 0;
+}
+
+.btn-modal-img {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    bottom: 1vw;
+    height: 100%;
+    width: 100%;
+
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+.btn-modal-img .modal-vidro-img {
+    width: 6vw;
+}
+
+.btn-modal-img .modal-alvenaria-img {
+    width: 12vw;
+}
+
+.btn-modal-img .modal-premoldada-img {
+    width: 6vw;
+}
+
+.btn-modal button {
+    width: 100%;
+    height: 100%;
+}
+
+.none {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slider {
+    margin: 0 auto;
+    width: 40vw;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 1px 4px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    width: 400%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: 22vw;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 1s ease;
+    background: black;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.layout-preto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.75) 5%,
+        rgba(0, 0, 0, 0.5) 10%,
+        rgba(0, 0, 0, 0.25) 15%,
+        rgba(0, 0, 0, 0) 25%
+    );
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 40.53%;
+    margin-top: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+.navigation-auto {
+    position: absolute;
+    width: 40.53%;
+    margin-top: 20vw;
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.manual-btn:hover {
+    background: white;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+#radio2:checked ~ .first {
+    margin-left: -25%;
+}
+#radio3:checked ~ .first {
+    margin-left: -50%;
+}
+
+.manual-btn {
+    border: 2px white solid;
+    padding: 0.4vw;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto div {
+    border: 2px solid rgb(92, 149, 255);
+    padding: 0.4vw;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: white;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: white;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: white;
+}
+
+.sharp1 {
+    width: 45vw;
+    position: absolute;
+    transform: rotate(
+        -4deg
+    ); /* Você pode ajustar o ângulo conforme necessário */
+    top: 10vw;
+    left: 16vw;
+    opacity: 0.6;
+    filter: drop-shadow(0 0 10px #0000004d);
+}
+
+.sharp2 {
+    width: 7vw;
+    position: absolute;
+
+    top: 12vw;
+    left: 2vw;
+    transform: rotate(
+        90deg
+    ); /* Você pode ajustar o ângulo conforme necessário */
+    opacity: 0.6;
+    border-radius: 50%;
+}
+
+.sharp3 {
+    width: 8vw;
+    position: absolute;
+    opacity: 0.6;
+    top: 50vw;
+    right: 15vw;
+    transform: rotate(
+        90deg
+    ); /* Você pode ajustar o ângulo conforme necessário */
+
+    border-radius: 50%;
+}
+
+.sharp2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.sharp3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.sharp1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.orçamento {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 5%;
+    gap: 1vw;
+}
+
+.orçamento h1 {
+    font-size: 2vw;
+    color: #1b1b1d;
+    font-weight: 600;
+    position: relative;
+}
+
+.btn-orçamento h1 {
+    z-index: 100;
+    color: white;
+    font-size: 1.5vw;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    margin: 0 auto;
+}
+
+.btn-orçamento {
+    padding: 2%;
+    height: 4vw;
+    cursor: pointer;
+    border-radius: 7px;
+    background: #00e777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4.5vw;
+    position: relative;
+    overflow: hidden;
+    gap: 1vw;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.btn-orçamento i {
+    color: white;
+    font-size: 1.8vw;
+    z-index: 100;
+}
+
+.btn-orçamento::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; /* Inicia fora da div para que o efeito comece da esquerda */
+    width: 100%;
+    height: 100%;
+    background-color: #00b15b;
+    transition: left 0.5s ease;
+}
+
+.btn-orçamento:hover::before {
+    left: 0;
+}
+
+.sharp4 {
+    width: 10vw;
+    position: absolute;
+    opacity: 0.6;
+    bottom: 40vw;
+    left: 6vw;
+    transform: rotate(
+        90deg
+    ); /* Você pode ajustar o ângulo conforme necessário */
+
+    border-radius: 50%;
+}
+
+.sharp4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.sharp5 {
+    width: 13vw;
+    position: absolute;
+    opacity: 0.4;
+    bottom: -1vw;
+    right: 5vw;
+    transform: rotate(
+        49deg
+    ); /* Você pode ajustar o ângulo conforme necessário */
+
+    border-radius: 50%;
+}
+
+.sharp5 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 767px) {
+    .text-overlay {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 1;
+    }
+    .text-overlay h1 {
+        font-family: "Roboto Slab", slab-serif;
+        color: white;
+        font-size: 14vw;
+        margin: 0;
+    }
+
+    .text-overlay h2 {
+        margin: 0;
+        flex-direction: column;
+        font-family: "Roboto Slab", slab-serif;
+        color: white; /* ou qualquer cor que desejar */
+        font-size: 5.8vw;
+    }
+    .card-home {
+        position: relative;
+        width: 38vw; /* Adiciona uma largura máxima para evitar que o card se expanda indefinidamente */
+        height: 50vw;
+        text-align: center;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5vw;
+        margin-top: 4vw;
+        border-radius: 1vw;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+    }
+    .home3 {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 5vw 5vw;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        transform: scale(0.95);
+    }
+
+    .card-image {
+        width: 35%; /* Garante que a imagem cubra todo o card */
+        height: auto;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center top;
+        position: absolute;
+        border: solid 0.35vw white;
+        top: 0; /* Move a imagem para a metade do card */
+        left: 50%; /* Move a imagem para a metade do card */
+        transform: translate(-50%, -50%); /* Centraliza a imagem */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .card-text {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 11vw 2vw 2vw 2vw;
+        color: #eee;
+        gap: 0;
+    }
+
+    .card-text h2 {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 100%;
+
+        font-size: 2.2vw;
+        margin: 0;
+        color: #912224;
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        padding-bottom: 3vw;
+    }
+    .card-text h1 {
+        font-family: "Inter", sans-serif;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-weight: 700;
+        font-size: 3vw;
+        margin: 0 0 3vw 0;
+        color: #1b1b1d;
+    }
+    .card-text p {
+        font-family: "Inter", sans-serif;
+        display: block;
+        font-weight: 500;
+        width: 100%;
+        text-align: center;
+        word-wrap: break-word; /* Permite que o texto quebre automaticamente */
+        height: 100%;
+        font-size: 3vw;
+        margin: 0;
+
+        color: #1b1b1d;
+    }
+    .img-retangular {
+        position: relative;
+        width: 100%;
+        height: 140vw;
+        overflow: hidden;
+    }
+
+    .img-retangular img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Mantém a proporção e ajusta a imagem para caber dentro do contêiner */
+    }
+
+    .cards-container {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        z-index: 3;
+        gap: 4vw;
+        top: 130vw;
+        flex-direction: column;
+
+        justify-content: space-around;
+    }
+    .card-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 0.6rem;
+        width: 80vw;
+        height: 40vw;
+        background: white;
+
+        padding: 4.5vw;
+        box-shadow: 0 30px 45px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-info p {
+        color: #252525;
+        text-align: center;
+        margin: 0;
+        font-size: 3vw;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+    }
+    .card-info h1 {
+        font-family: "Roboto Slab", slab-serif;
+        color: #751416;
+        font-size: 6vw;
+    }
+    .card-info i {
+        color: #ff0005;
+        font-size: 5.5vw;
+    }
+    .churrasco {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 135vw;
+    }
+
+    .img-churrasco {
+        position: relative;
+        width: 90vw;
+        margin-right: -10vw;
+    }
+
+    .img-churrasco img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Mantém a proporção e ajusta a imagem para caber dentro do contêiner */
+        /*    filter: brightness(
+            30%
+        ); Ajuste o valor conforme necessário para escurecer a imagem */
+    }
+
+    .texto-churrasco {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        color: #1b1b1d;
+        gap: 1vw;
+    }
+
+    .texto-churrasco h2 {
+        font-family: "Pacifico";
+        width: 100%;
+        color: #912224;
+        margin: 0;
+        padding-left: 12vw;
+        font-size: 5vw;
+    }
+
+    .texto-churrasco h1 {
+        width: 100%;
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        color: #1b1b1d;
+        padding-left: 12vw;
+        font-size: 4vw;
+        margin: 0;
+    }
+
+    .texto-churrasco p {
+        display: none;
+    }
+    .churrasco2 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 8vw;
+    }
+
+    .img-churrasco2 {
+        position: relative;
+        width: 80vw;
+        margin-left: -10vw;
+    }
+
+    .img-churrasco2 img {
+        object-fit: contain; /* Mantém a proporção e ajusta a imagem para caber dentro do contêiner */
+        /*    filter: brightness(
+            30%
+        ); Ajuste o valor conforme necessário para escurecer a imagem */
+    }
+
+    .texto-churrasco2 {
+        width: 60%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        color: #1b1b1d;
+        overflow: hidden;
+        gap: 1vw;
+    }
+
+    .texto-churrasco2 h2 {
+        font-family: "Pacifico";
+        color: #912224;
+        padding-left: 6vw;
+        margin: 0;
+        font-size: 5vw;
+    }
+
+    .sharp1 {
+        display: none;
+        width: 65vw;
+        position: absolute;
+        transform: rotate(
+            0deg
+        ); /* Você pode ajustar o ângulo conforme necessário */
+        top: 10vw;
+        left: 0vw;
+        opacity: 0.4;
+        filter: drop-shadow(0 0 10px #0000004d);
+    }
+
+    .texto-churrasco2 h1 {
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+        color: #1b1b1d;
+        padding-left: 6vw;
+        margin: 0;
+        font-size: 4vw;
+    }
+
+    .texto-churrasco2 p {
+        display: none;
+    }
+
+    .main2 {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #1b1b1d;
+        padding: 0 10%;
+    }
+    .main2-text {
+        width: 100%;
+        margin-top: 6vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 2vw;
+        padding: 0 5vw;
+    }
+    .img-main2 {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        gap: 10vw;
+    }
+
+    .orçamento h1 {
+        font-size: 5vw;
+        color: #1b1b1d;
+        font-weight: 600;
+        position: relative;
+        text-align: center;
+    }
+    .img-main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        box-shadow: 0 30px 45px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+    }
+
+    .img-main-container img {
+        width: 100%;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        height: 100%;
+        order: 2;
+    }
+
+    .img-main-text {
+        width: 100%;
+        height: 8vw;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        font-family: "Inter" sans-serif;
+        color: #1b1b1d;
+        font-size: 4vw;
+    }
+
+    .main2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .main2-text h1 {
+        width: 100%;
+        font-family: "Roboto Slab", slab-serif;
+        margin: 0;
+        font-size: 4.5vw;
+    }
+
+    .main2-text p {
+        width: 100%;
+        padding-bottom: 10vw;
+        font-family: "Inter", sans-serif;
+        font-size: 3.3vw;
+        font-weight: 400;
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+    .div-button-overlay {
+        width: 100%;
+        margin-top: 2vw;
+        height: 12vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2vw;
+    }
+
+    .button-overlay-product {
+        width: 30vw;
+        height: 10vw;
+        font-size: 3vw;
+        padding: 1vw 0;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        border: none;
+        border-radius: 0.8vw; /* Bordas arredondadas */
+        background-color: #ff0000; /* Fundo transparente para mostrar o brilho */
+        color: white; /* Cor do texto (vermelho) */
+        text-decoration: none;
+
+        box-shadow: 0px 0 15px rgba(255, 0, 0, 0.445); /* Ajuste o valor conforme necessário */
+        transition: all 0.3s linear;
+    }
+
+    .button-overlay-product:hover {
+        box-shadow: 0px 0 15px rgba(255, 0, 0, 0.068); /* Ajuste o valor conforme necessário */
+    }
+
+    .button-overlay-gallery {
+        width: 50vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2vw;
+        flex-direction: column;
+        position: relative;
+        padding: 1vw 0;
+        border: none;
+        color: white;
+        background: transparent;
+        height: 100%;
+        left: 0;
+    }
+
+    .button-overlay-gallery i {
+        display: none;
+    }
+
+    .button-overlay-gallery p {
+        position: relative;
+        top: 1.8vw;
+        width: 100%;
+        right: 0;
+
+        font-size: 3vw;
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        font-weight: 450;
+        padding-bottom: 1vw;
+    }
+
+    .button-overlay-gallery::after {
+        content: "";
+        position: relative;
+        bottom: 0;
+        left: 0;
+        transform: translateX(0);
+        width: 40vw;
+        height: 2px;
+        background-color: #ff0000; /* Adapte a cor conforme necessário */
+        transition: all 0.3s ease;
+        box-shadow: 0 0 0 rgb(255, 0, 0); /* Ajuste o valor conforme necessário */
+    }
+    .button-overlay-gallery:hover::after {
+        left: 0;
+        width: 40vw;
+        box-shadow: 0 0 10px rgb(255, 0, 0); /* Ajuste o valor conforme necessário */
+    }
+    .modal-content {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .modal-img {
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .modal-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .modal-text h1 {
+        width: 100%;
+        font-family: "Roboto Slab", slab-serif;
+        color: white;
+        font-size: 5vw;
+        margin: 0;
+        text-align: center;
+    }
+
+    .modal-text {
+        width: 100%;
+        background: linear-gradient(to right, #b9393b, #c45c5e);
+
+        height: 15vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn-modal-container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background: #f8f8f8;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 2vw 2.5vw 2vw 2.5vw;
+        gap: 0;
+    }
+
+    .btn-modal-3d {
+        position: relative;
+        width: 100%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        cursor: pointer;
+    }
+
+    .modal-img-estatica img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .modal-img-estatica {
+        position: relative;
+        background: none;
+        border-radius: 10px;
+        width: 30vw;
+        height: auto;
+        object-fit: contain;
+        bottom: 1vw;
+        opacity: 1;
+        transition: all 0.3s ease;
+        top: -0.5vw;
+        order: 2;
+    }
+
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        position: relative;
+        transition: none;
+        border-radius: 10px;
+        color: white;
+        flex-direction: row;
+        padding: 2vw 5vw 1vw 5vw;
+        gap: 1vw;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-btn {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 7vw;
+        position: relative;
+        color: white;
+        border-radius: 15px;
+        background: linear-gradient(to right, #912224, #c45c5e);
+        opacity: 1;
+        transition: none;
+        font-size: 1.5vw;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        bottom: 2vw;
+        opacity: 0;
+    }
+
+    .btn-modal-3d:hover .wrapper {
+        transform: perspective(0) rotateX(0);
+    }
+
+    .modal-text-3d {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 0.4vw 0 0.4vw;
+        color: #1b1b1d;
+        opacity: 1;
+        transition: none;
+        top: 0;
+    }
+
+    .modal-text-3d h1 {
+        font-size: 3vw;
+        font-family: "Inter", sans-serif;
+        font-weight: 450;
+        margin: 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    .modal-text-3d h2 {
+        width: 100%;
+        font-family: "Inter", sans-serif;
+        font-weight: 450;
+        font-size: 3vw;
+        margin: 0;
+        text-align: left;
+    }
+
+    .btn-modal-3d:hover .btn-modal-img {
+        bottom: 0;
+        width: 0;
+        opacity: 0;
+    }
+
+    .btn-modal-3d:hover .modal-text-3d {
+        opacity: 1;
+        bottom: 0;
+    }
+
+    .btn-modal-3d:hover .modal-btn {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    .modal-btn:hover {
+        box-shadow: 0; /* Ajuste o valor conforme necessário */
+    }
+
+    .btn-modal-3d:hover .modal-img-estatica {
+        opacity: 1;
+    }
+
+    .btn-modal-img {
+        position: absolute;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        bottom: 1vw;
+        height: 100%;
+        width: 100%;
+
+        opacity: 0;
+        transition: none;
+    }
+    .btn-modal-img .modal-vidro-img {
+        width: 0;
+    }
+
+    .btn-modal-img .modal-alvenaria-img {
+        width: 0;
+    }
+
+    .btn-modal-img .modal-premoldada-img {
+        width: 0;
+    }
+
+    .btn-modal button {
+        width: 100%;
+        height: 100%;
+    }
+
+    .none {
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-aboutUs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #f8f8f8;
+        color: white;
+        margin-top: 3.3rem;
+        gap: 20vw;
+    }
+    .slider {
+        margin: 0 auto;
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.8) 0px 1px 4px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .slides {
+        width: 400%;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        height: 60vw;
+        display: flex;
+    }
+
+    .slides input {
+        display: none;
+    }
+
+    .slide {
+        width: 25%;
+        position: relative;
+        transition: 1s ease;
+        background: black;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .layout-preto {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0.75) 5%,
+            rgba(0, 0, 0, 0.5) 10%,
+            rgba(0, 0, 0, 0.25) 15%,
+            rgba(0, 0, 0, 0) 25%
+        );
+    }
+
+    .manual-navigation {
+        position: absolute;
+        width: 80%;
+        margin-top: 53vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1vw;
+    }
+    .navigation-auto {
+        position: absolute;
+        width: 80%;
+        margin-top: 53vw;
+        display: flex;
+        justify-content: center;
+        gap: 1vw;
+    }
+    .seta-direita-slide {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+        top: 65%;
+        border-radius: 50%;
+        right: 12vw;
+        translate: (-50%, -50%);
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    .seta-esquerda-slide {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        transition: 0.3s ease;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+        top: 65%;
+        left: 12vw;
+        translate: (-50%, -50%);
+        cursor: pointer;
+    }
+
+    .seta-esquerda-slide i {
+        color: white;
+        font-size: 8vw;
+    }
+    .seta-direita-slide i {
+        color: white;
+        font-size: 8vw;
+    }
+    .btn-orçamento h1 {
+        z-index: 100;
+        color: white;
+        font-size: 4.5vw;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        margin: 0 auto;
+    }
+
+    .btn-orçamento {
+        padding: 4%;
+        height: 15vw;
+        cursor: pointer;
+        border-radius: 7px;
+        background: #00e777;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4.5vw;
+        position: relative;
+        overflow: hidden;
+        gap: 4vw;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+            rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+    .manual-btn {
+        border: 2px white solid;
+        padding: 1.5vw;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .navigation-auto div {
+        border: 2px solid rgb(92, 149, 255);
+        padding: 1.5vw;
+        border-radius: 50%10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .btn-orçamento i {
+        color: white;
+        font-size: 6.5vw;
+        z-index: 100;
+    }
+
+    .btn-orçamento::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%; /* Inicia fora da div para que o efeito comece da esquerda */
+        width: 100%;
+        height: 100%;
+        background-color: #00b15b;
+        transition: left 0.5s ease;
+    }
+
+    .btn-orçamento:hover::before {
+        left: 0;
+    }
+
+    .sharp5 {
+        width: 25vw;
+        position: absolute;
+        opacity: 0.6;
+        bottom: -8vw;
+        right: -5vw;
+        transform: rotate(49deg);
+        border-radius: 50%;
+    }
+
+    .sharp3 {
+        width: 25vw;
+        position: absolute;
+        opacity: 0.6;
+        top: 130vw;
+        right: 3vw;
+        transform: rotate(90deg);
+        border-radius: 50%;
+    }
+
+    .sharp2 {
+        width: 25vw;
+        position: absolute;
+        top: 30vw;
+        left: -4vw;
+        transform: rotate(90deg);
+        opacity: 0.6;
+        border-radius: 50%;
+    }
+
+    section {
+        width: 100%;
+        height: 100%;
+        padding: 10vw 5% 3vw 5%;
+    }
+}

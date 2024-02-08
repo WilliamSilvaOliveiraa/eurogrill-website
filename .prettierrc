@@ -1,0 +1,11 @@
+{
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": true,
+
+    "printWidth": 80,
+    "bracketSpacing": true,
+    "jsxBracketSameLine": true,
+    "endOfLine": "auto",
+    "htmlWhitespaceSensitivity": "ignore"
+}

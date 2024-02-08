@@ -1,0 +1,1114 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+.main-contactPage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 2vw 10% 0 10%;
+    align-items: center;
+    justify-content: center;
+    background: #f8f8f8;
+    color: white;
+    flex-direction: column;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    background: #f8f8f8;
+    color: #fff;
+    gap: 2rem;
+    transition: all 0.5s ease;
+    margin: 0;
+}
+
+.inputs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+.title {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #252525;
+    font-size: 2rem;
+}
+
+.titles {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -2rem;
+    margin-top: -1rem;
+}
+
+.titles i {
+    font-size: 2vw;
+    color: #751416;
+}
+
+.container p {
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #252525;
+    margin: 0;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 3rem;
+}
+
+.input {
+    color: #252525;
+    font-size: 1rem;
+    margin: 0 auto;
+    width: 100%;
+
+    border: none;
+    transition: all 0.3s;
+    background: transparent;
+    border-bottom: 1px solid #252525; /* Adiciona apenas a borda inferior */
+    outline: none; /* Remove a borda de foco ao clicar na entrada (pode ser ajustado conforme necessário) */
+}
+
+.input::placeholder {
+    color: #252525;
+    font-family: "Inter";
+    font-weight: 400;
+}
+
+.text-area-div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textarea {
+    font-family: "Inter", sans-serif;
+    color: #252525;
+    font-size: 1.2vw;
+    margin-bottom: 0 auto;
+    padding: 1vw;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    background-color: rgba(165, 165, 165, 0.326);
+    border: none;
+
+    width: 100%;
+    display: block;
+    transition: all 0.3s;
+    resize: none;
+    outline: none; /* Remove a borda de foco ao clicar na entrada (pode ser ajustado conforme necessário) */
+}
+
+.form label {
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    color: #252525;
+    font-size: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.button {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    width: 10vw;
+    height: 8vh;
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer;
+    background-color: #751416;
+    transition: all 0.3s ease-out;
+    margin-bottom: 1vw;
+    margin-top: -2.5vw;
+}
+
+.button:hover {
+    background-color: #751416;
+    transform: scale(1.01);
+}
+.sharp4-contato {
+    width: 7vw;
+    position: absolute;
+    bottom: -3vw;
+    left: 2vw;
+    transform: rotate(
+        90deg
+    ); /* Você pode ajustar o ângulo conforme necessário */
+    opacity: 0.6;
+    border-radius: 50%;
+}
+
+.sharp4-contato img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+.sharp3-contato {
+    width: 7vw;
+    position: absolute;
+    bottom: 34vw;
+    right: 4vw;
+
+    transform: rotate(
+        90deg
+    ); /* Você pode ajustar o ângulo conforme necessário */
+    opacity: 0.6;
+    border-radius: 50%;
+}
+
+.sharp3-contato img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.sharp2-contato {
+    width: 8vw;
+    position: absolute;
+
+    top: 1vw;
+    right: 30vw;
+    transform: rotate(
+        90deg
+    ); /* Você pode ajustar o ângulo conforme necessário */
+    opacity: 0.6;
+    border-radius: 50%;
+}
+
+.sharp2-contato img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.contact-information {
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    color: #1b1b1d;
+    width: 100%;
+    gap: 3vw;
+}
+
+.contact-information h1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: flex-start;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+.infos {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info p {
+    white-space: pre-wrap; /* Quebra de linha mantendo as quebras originais e adicionando quebras conforme necessário */
+    overflow-wrap: break-word; /* Quebra de palavra em caracteres longos */
+    margin: 0;
+    text-align: left;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    height: 100%;
+    font-size: 0.8rem; /* Ajuste o tamanho da fonte conforme necessário */
+}
+
+.info i {
+    margin-right: 1vw;
+    color: #912224;
+}
+
+.social {
+    display: flex;
+
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5vw;
+}
+
+.link-social {
+    display: flex;
+    width: 3vw;
+    height: 100%;
+    outline: none;
+    align-items: flex-start;
+    text-decoration: none;
+    color: inherit;
+}
+
+.link-social i {
+    font-size: 2.5vw;
+    display: flex;
+
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: #912224;
+}
+
+.section-22 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f8f8;
+    transform: scale(1);
+    margin: 8vw 0;
+    gap: 2vw;
+}
+
+.atendimento {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2vw;
+    width: 100%;
+    color: black;
+}
+
+.atendimento-title {
+    width: 100%;
+
+    color: #1b1b1d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.atendimento-title h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    color: #1b1b1d;
+}
+
+.atendimento-js h1 {
+    font-size: 1rem;
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.atendimento-js {
+    width: 100%;
+    color: #1b1b1d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.atendimento-time h1 {
+    font-size: 1.5vw;
+}
+
+.atendimento-time {
+    width: 100%;
+    padding-top: 1vw;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+
+    justify-content: center;
+    flex-direction: column;
+}
+
+.divisor {
+    width: 1px;
+    height: 25vw;
+    border-radius: 4px;
+    background: #7a7a7e8c;
+    position: relative;
+}
+
+.atendimento-horario {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 2vw;
+    justify-content: center;
+}
+
+.atendimento-horario h1 {
+    width: 100px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+.atendimento-horario h2 {
+    width: 100px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+.modal-contact {
+    width: 80%;
+    height: 80%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1vw;
+    background: #fffafa;
+}
+
+.modal-contact-header {
+    background: #9ed266;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1); /* Ajuste o valor conforme necessário */
+}
+
+.modal-contact-header i {
+    font-size: 5.5vw;
+    color: white;
+    padding: 1vw;
+    margin: 0;
+}
+
+.text-modal-contact {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1vw 3vw 0 3vw;
+    color: #51525b;
+    gap: 0.5vw;
+}
+
+.text-modal-contact h1 {
+    font-size: 1.9vw;
+    color: #1b1b1d;
+}
+
+.text-modal-contact p {
+    color: #51525b;
+    font-size: 1.2vw;
+}
+.borda-contact {
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.382);
+    position: relative;
+}
+
+.btn-modal-contact {
+    color: rgb(0, 99, 186);
+    font-size: 1.4vw;
+    font-weight: 600;
+    margin-bottom: 2vw;
+    cursor: pointer;
+
+    width: 4vw;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    z-index: 10000;
+
+    transition: all 0.3s ease;
+}
+
+.border-btn-modal-contact {
+    position: absolute;
+
+    bottom: 2.2vw;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2vw;
+    border-radius: 10px;
+    height: 0.3vw;
+    background: gray;
+    transition: all 0.3s ease;
+}
+
+.btn-modal-contact:hover {
+    transform: scale(1.02);
+}
+
+.desenho-fundo {
+    position: absolute;
+    left: 38vw;
+    bottom: 24vw;
+    opacity: 0.65;
+}
+
+.divisor2 {
+    display: none;
+}
+
+.desenho-fundo2 {
+    position: absolute;
+    left: 12vw;
+    bottom: 20.5vw;
+    opacity: 0.65;
+}
+.desenho-fundo3 {
+    position: absolute;
+    left: 7.5vw;
+    bottom: 24vw;
+    opacity: 0.65;
+}
+.desenho-fundo4 {
+    position: absolute;
+    left: 42vw;
+    bottom: 20.5vw;
+    opacity: 0.65;
+}
+.desenho-fundo5 {
+    position: absolute;
+    left: 31vw;
+    bottom: 22vw;
+    opacity: 0.65;
+}
+
+.desenho-fundo6 {
+    position: absolute;
+    left: 18.5vw;
+    bottom: 23.4vw;
+    opacity: 0.65;
+}
+
+.reta-vertical {
+    width: 0.4vw;
+    height: 1.9vw;
+    border-radius: 20px;
+    background: white;
+}
+
+.reta-horizontal {
+    background: white;
+    position: absolute;
+    width: 1.9vw;
+    height: 0.4vw;
+    border-radius: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+}
+
+.error-text {
+    color: red; /* Cor do texto de erro */
+    font-size: 1rem; /* Tamanho da fonte do texto de erro */
+    margin: 0;
+    width: 100%;
+    font-weight: 500;
+
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+/* Adicione a classe error-opacity para controlar a opacidade quando inputError for true */
+.error-opacity {
+    opacity: 1;
+}
+
+.text-open {
+    color: #9ed266;
+}
+
+.text-close {
+    color: red;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        background: #f8f8f8;
+        color: #fff;
+        padding: 0;
+        gap: 2rem;
+        margin: 0;
+    }
+
+    .main-contactPage {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding: 20% 10% 0 10%;
+        align-items: center;
+        justify-content: center;
+        background: #f8f8f8;
+        color: white;
+        flex-direction: column;
+    }
+    .title {
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        color: #252525;
+        font-size: 6vw;
+    }
+
+    .titles {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: -2rem;
+        margin-top: -1rem;
+    }
+
+    .titles i {
+        font-size: 8vw;
+        color: #751416;
+    }
+    .container p {
+        margin-bottom: 0;
+        font-size: 3.8vw;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        color: #252525;
+    }
+
+    .form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .inputs {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10vw;
+        flex-direction: column;
+    }
+    .input {
+        color: #252525;
+        font-size: 3.8vw;
+        margin: 0 auto;
+        width: 100%;
+        height: 6vw;
+        border: none;
+        transition: all 0.3s;
+        background: transparent;
+        border-bottom: 1px solid #252525; /* Adiciona apenas a borda inferior */
+        outline: none; /* Remove a borda de foco ao clicar na entrada (pode ser ajustado conforme necessário) */
+    }
+
+    .input::placeholder {
+        color: #252525;
+        font-family: "Inter";
+        font-weight: 400;
+    }
+
+    .text-area-div {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textarea {
+        font-family: "Inter", sans-serif;
+        color: #252525;
+        font-size: 3.8vw;
+
+        padding: 1vw 2vw;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+        background-color: rgba(165, 165, 165, 0.326);
+        border: none;
+        width: 100%;
+        height: 20vw;
+        display: block;
+        transition: all 0.3s;
+        resize: none;
+        outline: none; /* Remove a borda de foco ao clicar na entrada (pode ser ajustado conforme necessário) */
+    }
+
+    .form label {
+        width: 100%;
+        font-family: "Inter", sans-serif;
+        color: #252525;
+        font-size: 3.8vw;
+        display: flex;
+        justify-content: flex-start;
+        margin: 0;
+    }
+
+    .button {
+        font-family: "Inter", sans-serif;
+        font-size: 5vw;
+        font-weight: 500;
+        color: white;
+        width: 100%;
+        height: 13vw;
+        border-radius: 5px;
+        border: 0;
+        cursor: pointer;
+        background-color: #751416;
+        transition: all 0.3s ease-out;
+        margin-bottom: 1vw;
+    }
+
+    .button:hover {
+        background-color: #751416;
+        transform: scale(1);
+        border-radius: 10px;
+    }
+
+    .social {
+        display: flex;
+        height: 100%;
+        width: 50%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .link-social {
+        display: flex;
+
+        height: 100%;
+        outline: none;
+        align-items: flex-start;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .link-social i {
+        font-size: 2.4vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        color: #912224;
+    }
+
+    .section-22 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #f8f8f8;
+        transform: scale(1);
+        margin-top: 15vw;
+    }
+
+    .atendimento {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2vw;
+        padding: 15vw 0 10vw 0;
+        color: black;
+    }
+
+    .atendimento-title {
+        width: 100%;
+        color: #1b1b1d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .atendimento-title h1 {
+        font-size: 6vw;
+        margin: 0;
+        font-family: "Inter", sans-serif;
+    }
+
+    .atendimento-js h1 {
+        font-size: 5vw;
+        margin: 0;
+
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+    }
+
+    .atendimento-js {
+        width: 100%;
+        color: #1b1b1d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3vw 0 1.7vw 0;
+    }
+
+    .atendimento-time {
+        width: 100%;
+        padding-top: 1vw;
+        display: flex;
+        align-items: flex-start;
+        gap: 1vw;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .divisor {
+        width: 85%;
+        height: 2px;
+        border-radius: 4px;
+        background: #7a7a7e;
+        opacity: 50%;
+        position: relative;
+    }
+
+    .divisor2 {
+        width: 100%;
+        height: 2px;
+        border-radius: 4px;
+        background: #7a7a7e;
+        opacity: 50%;
+        position: relative;
+        display: block;
+    }
+
+    .atendimento-horario {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        padding: 0 5%;
+    }
+
+    .atendimento-horario h1 {
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 4vw;
+        width: 100%;
+    }
+
+    .atendimento-horario h2 {
+        width: 100%;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 4vw;
+        text-align: flex-end;
+    }
+
+    .contact-information {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 10vw;
+        flex-direction: column;
+        color: #1b1b1d;
+        padding: 10vw 0 15vw 0;
+    }
+
+    .contact-information h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 6vw;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        font-family: "Inter";
+    }
+
+    .infos {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 8vw;
+    }
+
+    .info {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1vw;
+    }
+
+    .info p {
+        white-space: pre-wrap; /* Quebra de linha mantendo as quebras originais e adicionando quebras conforme necessário */
+        overflow-wrap: break-word; /* Quebra de palavra em caracteres longos */
+        margin: 0;
+        text-align: left;
+        width: 100%;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        height: 100%;
+        font-size: 3.8vw; /* Ajuste o tamanho da fonte conforme necessário */
+    }
+
+    .info i {
+        margin-right: 1vw;
+        font-size: 4vw;
+        color: #912224;
+    }
+
+    .social {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 10vw;
+    }
+
+    .link-social {
+        display: flex;
+        width: 8vw;
+        height: 100%;
+        outline: none;
+        align-items: flex-start;
+        justify-content: center;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .link-social i {
+        font-size: 8vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        color: #912224;
+    }
+    .error-text {
+        color: red; /* Cor do texto de erro */
+        font-size: 3.5vw; /* Tamanho da fonte do texto de erro */
+        margin: 0;
+        width: 100%;
+        position: relative;
+        top: 2vw;
+    }
+    .modal-contact {
+        width: 100%;
+        height: 90%;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 1vw;
+        background: #fffafa;
+    }
+    .modal-contact-header i {
+        font-size: 10vw;
+    }
+
+    .modal-contact-header {
+        background: #9ed266;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40%;
+        font-size: 5.5vw;
+        color: white;
+        padding: 1vw;
+        margin: 0;
+        border-top-right-radius: 1vw;
+        border-top-left-radius: 1vw;
+        box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1); /* Ajuste o valor conforme necessário */
+    }
+
+    .text-modal-contact {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 3vw 0 3vw;
+        color: #51525b;
+        gap: 2vw;
+    }
+
+    .text-modal-contact h1 {
+        font-size: 4vw;
+        color: #1b1b1d;
+    }
+
+    .text-modal-contact p {
+        color: #51525b;
+        font-size: 2.5vw;
+    }
+    .borda-contact {
+        width: 100%;
+        height: 1px;
+        background: rgba(0, 0, 0, 0.382);
+        position: relative;
+    }
+
+    .btn-modal-contact {
+        color: rgb(0, 99, 186);
+        font-size: 4vw;
+        font-weight: 600;
+        margin-bottom: 4vw;
+        cursor: pointer;
+
+        width: 10vw;
+        height: 10vw;
+
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        z-index: 10000;
+
+        transition: all 0.3s ease;
+    }
+
+    .border-btn-modal-contact {
+        position: absolute;
+
+        bottom: 2.2vw;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 2vw;
+        border-radius: 10px;
+        height: 0.3vw;
+        background: gray;
+        transition: all 0.3s ease;
+    }
+
+    .btn-modal-contact:hover {
+        transform: scale(1.02);
+    }
+    .desenho-fundo {
+        position: absolute;
+        left: 58vw;
+        bottom: 0;
+        top: 6vw;
+        opacity: 0.65;
+    }
+
+    .desenho-fundo2 {
+        position: absolute;
+        left: 10vw;
+        bottom: 0;
+        top: 13vw;
+        opacity: 0.65;
+    }
+    .desenho-fundo3 {
+        position: absolute;
+        left: 5.5vw;
+        bottom: 0;
+        top: 6vw;
+        opacity: 0.65;
+    }
+    .desenho-fundo4 {
+        position: absolute;
+        left: 49vw;
+        bottom: 0;
+        top: 14vw;
+        opacity: 0.65;
+    }
+    .desenho-fundo5 {
+        position: absolute;
+        left: 41vw;
+        bottom: 0;
+        top: 6vw;
+        opacity: 0.65;
+    }
+
+    .desenho-fundo6 {
+        position: absolute;
+        left: 20vw;
+        bottom: 0;
+        top: 8vw;
+        opacity: 0.65;
+    }
+
+    .reta-vertical {
+        width: 0.8vw;
+        height: 4.8vw;
+        border-radius: 20px;
+        background: white;
+    }
+
+    .reta-horizontal {
+        background: white;
+        position: absolute;
+        width: 4.8vw;
+        height: 0.8vw;
+        border-radius: 20px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 3.7%;
+    }
+}

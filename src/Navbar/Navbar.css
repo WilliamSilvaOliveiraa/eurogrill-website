@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainColor: #1b1b1d;
+    --mainColorLight: #5767aa;
+    --secondaryColor: #db2b39;
+    --textColor: #eee;
+}
+
+header {
+    z-index: 1000; /* garante que a barra de navegação esteja acima de outros elementos */
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 5%;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+    width: 100%;
+}
+
+.navbar.fullscreen header {
+    position: relative;
+}
+
+.Logo {
+    margin: 0; /* Ajusta as margens do texto */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.text-not {
+    text-decoration: none;
+    color: inherit;
+}
+
+.Logo h3 {
+    margin: 0;
+    font-family: "Roboto Slab", slab-serif;
+    position: relative;
+    display: inline-block; /* Garante que o h3 tenha uma largura definida */
+    font-size: 1.5vw;
+    top: 5px;
+}
+
+.Logo h3::before {
+    content: ""; /* Adiciona conteúdo ao elemento criado */
+    display: block; /* Torna o elemento criado um bloco para ocupar toda a largura disponível */
+    border-bottom: 2px solid #912224; /* Adiciona um traço de 2 pixels de largura na cor secundária */
+    margin-top: 10px; /* Adiciona espaçamento opcional entre o texto e o traço ajustando a margem superior */
+    position: absolute; /* Permite um posicionamento absoluto em relação ao elemento pai (h3) */
+    width: 100%; /* Garante que o traço ocupe toda a largura do elemento pai (h3) */
+    bottom: 0; /* Posiciona o traço na parte inferior do elemento pai (h3) */
+}
+
+.Logo img {
+    width: 30px;
+    transition: width 0.5s ease; /* Adiciona uma transição suave à propriedade width */
+    max-width: 100%; /* Garante que a largura não ultrapasse o tamanho original da imagem */
+    margin-right: 10px; /* Adiciona um espaçamento entre a imagem e o texto */
+}
+
+nav a {
+    margin: 0 2.5rem;
+    color: var(--textColor);
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-size: 1vw;
+    font-weight: 400;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: var(--secondaryColor);
+    transform: scale(1.01); /* Ajuste o valor conforme necessário */
+}
+
+header .nav-btn {
+    width: 100%;
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--textColor);
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+    font-size: 1.8rem;
+}
+
+header div,
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    bottom: 15px;
+    display: flex; /* Adicione esta propriedade */
+    justify-content: flex-end;
+    align-items: center; /* Centralize verticalmente */
+    margin: 0;
+}
+
+nav .nav-close-btn {
+    display: none;
+}
+
+.dropdown {
+    position: absolute;
+    top: 0;
+    width: 10vw;
+    height: 33px;
+    background: #912224;
+    color: #fff;
+    font-size: 1.1vw; /* Tamanho da fonte responsivo em relação à largura da viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px (0, 0, 0, 0.2);
+    padding: 1vw;
+}
+
+.setas {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.dropdown .left-icon,
+.dropdown .right-icon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    width: 0.8vw;
+    height: 0.2vw; /* 3% da altura da viewport */
+    background: #fff;
+    border-radius: 40px;
+    transition: 0.5s;
+}
+
+.dropdown .left-icon {
+    left: 2px;
+    transform: rotate(45deg);
+}
+
+.dropdown.active .left-icon {
+    left: 2px;
+    transform: rotate(135deg);
+}
+
+.dropdown .right-icon {
+    right: 2px;
+    transform: rotate(-45deg);
+}
+
+.dropdown.active .right-icon {
+    right: 2px;
+    transform: rotate(-135deg);
+}
+
+.dropdown .items {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin-top: 34px;
+    flex-direction: column; /* Adição para ajustar para coluna */
+    overflow: hidden;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.dropdown.active .items {
+    visibility: visible;
+}
+
+.dropdown .items a {
+    left: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    font-weight: 600;
+    font-size: 1vw;
+    background-color: #ffffff;
+    color: #912224;
+    text-decoration: none;
+    border-radius: 0.35vw;
+    z-index: 1;
+    padding: 7px 1vw;
+    margin-top: 2px;
+    overflow: hidden;
+    transition: 0.5s;
+    transition-delay: calc(60ms * var(--i));
+    border: 1px solid #c0c0c0; /* Adicione a cor e espessura da borda desejada */
+}
+
+header .responsive_nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.dropdown.active .items a {
+    left: 0;
+}
+
+.dropdown .items a:hover {
+    color: white;
+}
+
+.dropdown .items a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #912224;
+    z-index: -1;
+    border-radius: inherit;
+    transform: scaleX(0);
+
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+.dropdown .items a:hover span {
+    transform: scaleX(1); /* Quando hover, aumenta a escala horizontal para 1 */
+    border-radius: 0px;
+}
+
+.dropdown .items a.pre-moldadas {
+    font-size: 0.9vw;
+    padding: 8.28px 1vw;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 767px) {
+    header .nav-btn {
+        visibility: visible;
+        display: block;
+        opacity: 1;
+        height: 100%;
+        align-items: center;
+    }
+    header nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        flex-direction: column;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5vw;
+        background: #1b1b1d;
+        transition: 1s ease;
+        transform: translateY(-100vh);
+        gap: 2rem;
+        z-index: 1000;
+    }
+
+    header .responsive_nav {
+        transform: none;
+    }
+
+    nav .nav-close-btn {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+    }
+
+    nav a {
+        font-size: 2rem;
+        z-index: 1000;
+    }
+    header {
+        z-index: 1000; /* garante que a barra de navegação esteja acima de outros elementos */
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+        padding: 0 2rem;
+        background-color: var(--mainColor);
+        color: var(--textColor);
+        width: 100%;
+    }
+    .Logo {
+        margin: 0; /* Ajusta as margens do texto */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .Logo h3 {
+        margin: 0;
+        font-family: "Roboto Slab", slab-serif;
+        position: relative;
+        display: inline-block; /* Garante que o h3 tenha uma largura definida */
+        font-size: 1.3rem;
+        top: 0;
+    }
+
+    .Logo h3::before {
+        content: ""; /* Adiciona conteúdo ao elemento criado */
+        display: block; /* Torna o elemento criado um bloco para ocupar toda a largura disponível */
+        border-bottom: 2px solid #912224; /* Adiciona um traço de 2 pixels de largura na cor secundária */
+        margin-top: 10px; /* Adiciona espaçamento opcional entre o texto e o traço ajustando a margem superior */
+        position: absolute; /* Permite um posicionamento absoluto em relação ao elemento pai (h3) */
+        width: 100%; /* Garante que o traço ocupe toda a largura do elemento pai (h3) */
+        bottom: 0; /* Posiciona o traço na parte inferior do elemento pai (h3) */
+    }
+
+    .Logo img {
+        display: none;
+        width: 40px;
+        transition: width 0.5s ease; /* Adiciona uma transição suave à propriedade width */
+        max-width: 100%; /* Garante que a largura não ultrapasse o tamanho original da imagem */
+        margin-right: 10px; /* Adiciona um espaçamento entre a imagem e o texto */
+    }
+
+    .dropdown {
+        position: absolute;
+        top: 0;
+        width: 25vw;
+        height: 34px;
+        background: #912224;
+        color: #fff;
+        font-size: 1rem; /* Tamanho da fonte responsivo em relação à largura da viewport */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 5px 10px (0, 0, 0, 0.2);
+        padding: 2vw;
+    }
+    .dropdown .left-icon,
+    .dropdown .right-icon {
+        position: relative;
+        top: 1px;
+        display: inline-block;
+        width: 0.6rem;
+        height: 0.2rem; /* 3% da altura da viewport */
+        background: #fff;
+        border-radius: 40px;
+        transition: 0.5s;
+    }
+    .dropdown .items a {
+        padding: 1vw;
+        font-size: 1rem;
+        height: 15vw;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        border-radius: 5px;
+    }
+    .dropdown .items a.pre-moldadas {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .dropdown .items {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
+        flex-direction: column;
+        gap: 5px;
+        overflow: hidden;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+
+    .dropdown .left-icon {
+        left: 2px;
+        transform: rotate(45deg);
+    }
+
+    .dropdown.active .left-icon {
+        left: 2px;
+        transform: rotate(135deg);
+    }
+
+    .dropdown .right-icon {
+        right: 2px;
+        transform: rotate(-45deg);
+    }
+
+    .dropdown.active .right-icon {
+        right: 2px;
+        transform: rotate(-135deg);
+    }
+    .setas {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dropdown .items a span {
+        display: none;
+    }
+    .dropdown .items a:hover {
+        color: #912224;
+    }
+}
