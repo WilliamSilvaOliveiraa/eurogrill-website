@@ -10,9 +10,7 @@ import {
 
 import Navbar from "./Navbar/Navbar";
 import FooterSite from "./FooterSite/FooterSite";
-import ContactPageRestore from "./ContactPageRestore/ContactPageRestore";
 import { Outlet } from "react-router-dom";
-import ContactPage from "./ContactPage/ContactPage";
 
 function App() {
     const [isNavFixed, setIsNavFixed] = useState(false);
