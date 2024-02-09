@@ -81,7 +81,7 @@ function ContactPage() {
                         "Email enviado",
                         response.status,
                         response.text,
-                        setOpenModal(true) // Abre o modal aqui após o envio bem-sucedido
+                        setOpenModal(true)
                     );
                     setName("");
                     setEmail("");
