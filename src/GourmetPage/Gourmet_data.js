@@ -70,12 +70,7 @@ const gourmet_card = [
         description: "A clássica em áreas gourmet!",
         thumb: Imagem8,
     },
-    {
-        id: 9,
-        gourmet_name: "Coifa Inox Grande",
-        description: "Robusta e utilitária!",
-        thumb: Imagem9,
-    },
+
     {
         id: 10,
         gourmet_name: "Vidro Coifa Preta",

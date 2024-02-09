@@ -24,12 +24,6 @@ import Imagem25 from "./Alvenarias_imgs/Imagem25.jpg";
 
 const alvenaria_card = [
     {
-        id: 1,
-        alvenaria_name: "4 em 1 Cor Palha",
-        description: "Rústica e Agradável!",
-        thumb: Imagem1,
-    },
-    {
         id: 2,
         alvenaria_name: "2 em 1 Cor Palha",
         description: "Combina com um lugar aconchegante!",
