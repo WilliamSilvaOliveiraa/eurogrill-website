@@ -332,7 +332,7 @@ header .responsive_nav {
         font-family: "Roboto Slab", slab-serif;
         position: relative;
         display: inline-block; /* Garante que o h3 tenha uma largura definida */
-        font-size: 1.3rem;
+        font-size: 4.3vw;
         top: 0;
     }
 
@@ -383,7 +383,7 @@ header .responsive_nav {
     }
     .dropdown .items a {
         padding: 1vw;
-        font-size: 1rem;
+        font-size: 3vw;
         height: 15vw;
         align-items: center;
         justify-content: center;
@@ -391,7 +391,7 @@ header .responsive_nav {
         border-radius: 5px;
     }
     .dropdown .items a.pre-moldadas {
-        font-size: 1rem;
+        font-size: 3vw;
         text-align: center;
     }
 
@@ -441,5 +441,17 @@ header .responsive_nav {
     }
     .dropdown .items a:hover {
         color: #912224;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .Logo h3::before {
+        content: ""; /* Adiciona conteúdo ao elemento criado */
+        display: block; /* Torna o elemento criado um bloco para ocupar toda a largura disponível */
+        border-bottom: 2px solid #912224; /* Adiciona um traço de 2 pixels de largura na cor secundária */
+        margin-top: 10px; /* Adiciona espaçamento opcional entre o texto e o traço ajustando a margem superior */
+        position: absolute; /* Permite um posicionamento absoluto em relação ao elemento pai (h3) */
+        width: 100%; /* Garante que o traço ocupe toda a largura do elemento pai (h3) */
+        bottom: 0; /* Posiciona o traço na parte inferior do elemento pai (h3) */
     }
 }
