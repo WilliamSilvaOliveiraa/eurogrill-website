@@ -65,12 +65,6 @@ const premoldada_card = [
         description: "Lindas!",
         thumb: Imagem9,
     },
-    {
-        id: 10,
-        premoldada_name: "2 em 1, 62cm Acabamento Tijolo Palha",
-        description: "Combina em qualquer ambiente!",
-        thumb: Imagem10,
-    },
 ];
 
 export default premoldada_card;
