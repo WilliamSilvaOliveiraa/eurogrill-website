@@ -179,7 +179,7 @@
 
 .img-topo-gourmet img {
     width: 100%;
-    height: 35vw;
+    height: 37vw;
     object-fit: cover; /* Mantém a proporção e ajusta a imagem para caber dentro do contêiner */
     filter: brightness(
         30%
