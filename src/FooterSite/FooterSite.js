@@ -1,18 +1,18 @@
 import React from "react";
 import "./FooterSite.css";
-import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
+// import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 import { Link } from "react-router-dom";
 
 function FooterSite() {
-    const { isLoaded } = useJsApiLoader({
-        id: "google-map-script",
-        googleMapsApiKey: "AIzaSyCSS5G4wii8-wQNWr-2K63Oa_1wj2EZvFg",
-    });
+    // const { isLoaded } = useJsApiLoader({
+    //     id: "google-map-script",
+    //     googleMapsApiKey: "AIzaSyCSS5G4wii8-wQNWr-2K63Oa_1wj2EZvFg",
+    // });
 
-    const position = {
-        lat: -22.686092191361958,
-        lng: -46.991635586488805,
-    };
+    // const position = {
+    //     lat: -22.686092191361958,
+    //     lng: -46.991635586488805,
+    // };
 
     return (
         <footer>
@@ -73,7 +73,7 @@ function FooterSite() {
                         </a>
                     </div>
                 </div>
-                <div className="maps-euro">
+                {/* <div className="maps-euro">
                     {isLoaded ? (
                         <GoogleMap
                             mapContainerStyle={{
@@ -100,7 +100,7 @@ function FooterSite() {
                     ) : (
                         <></>
                     )}
-                </div>
+                </div> */}
             </div>
             <div id="footer_copyright">
                 <h1>Euro Grill Churrasqueiras & Acessórios Copyright 2024</h1>{" "}
